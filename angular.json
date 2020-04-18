@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "empportal"
+    }
+  },
+  "defaultProject": "empportal",
+  "cli": {
+    "analytics": false
+  }
 }

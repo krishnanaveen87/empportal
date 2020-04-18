@@ -1,0 +1,124 @@
+<div class="main">
+   
+    <div class="left_Body">
+        <div class="side_Menu">
+            <ul>
+                <li> <i class="fa fa-list iconColor" aria-hidden="true"></i>  <span class="menuTxt">Overview</span> </li>
+                <li> <i class="fa fa-envelope-o iconColor" aria-hidden="true"></i>  <span class="menuTxt">message</span></li>
+                <li (click)="toggle()"> <i class="fa fa-search iconColor" aria-hidden="true"></i>  <span class="menuTxt">{{buttonName}}</span>
+                    <div *ngIf="show" class="searchDiv">
+
+                      <ul>
+                          <li> Front End developer      </li>
+                          <li> ML Engineering   </li>
+                          <li> Quality Analyst     </li>
+                          <li> Human Resource Management  </li>
+                          <li> Research & Developer  </li>
+                      </ul>
+
+                        <!--<select [(ngModel)]="designation">
+                            <option>select</option>
+                            <option>UI Developer</option>
+                            <option>Testing</option>
+                            <option>Admin</option>
+                            <option>IT Analyst</option>
+                        </select>-->
+                    </div>
+                </li>
+                <li> <i class="fa fa-filter iconColor" aria-hidden="true"></i>  <span class="menuTxt">Filter</span> </li>
+                <li>  <i class="fa fa-history iconColor" aria-hidden="true"></i>  <span class="menuTxt"> History </span></li>
+                <li> <i class="fa fa-user-circle iconColor" aria-hidden="true"></i>  <span class="menuTxt">My Account</span> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content_body">
+      
+
+        <div class="row">
+            <div class="row">
+                <div class="searchTxt">
+                    <input type="text" [(ngModel)]="name" class="searchBox" placeholder="Serach Designation"/>
+                </div>
+                <div class="bell">
+                    <label>Show only Banglore Employee </label>  <input type="checkbox" [(ngModel)]="employee.checked"> 
+                   
+                </div>
+            </div>
+            
+       
+            <div class="panel" *ngFor="let emp of employee | searchEmp:name" >               
+                
+                <div class="panel-heading">
+                    <div class="panel-hd-img" ><i class="fa fa-user-circle iconColor iconImg" aria-hidden="true"></i> 
+                
+                        <div *ngIf="show" class="starDiv">
+
+                        </div>
+                    </div>
+                    <div class="panel-hd-title">
+                        <h5>{{emp.name}}</h5>
+                        <h6>{{emp.designation}}</h6>
+                    </div>
+                    <div class="panel-hd-icon">
+                       <div (click)="toggle1()"><i class="fa fa-paper-plane starIcon" aria-hidden="true"></i>
+                        <div *ngIf="show1" class="iconDiv">
+
+                            <ul>
+                                <li> <img src="assets/images/gmail.png" style="width:25px; height:15px">     </li>
+                                <li> <img src="assets/images/Hangouts_icon.jpg" style="width:25px; height:15px">   </li>
+                                <li><img src="assets/images/Instagram_icon.png" style="width:25px; height:15px">   </li>
+                                <li> <img src="assets/images/flat-share-icon.jpg" style="width:25px; height:15px">   </li>
+                              
+                            </ul>
+                            </div>
+                    </div> 
+
+                    </div>
+                </div>
+                <div class="panel-heading-star">
+               <div class="ratingLft">Rating :</div>
+               <div class="ratingRt">
+                <fieldset class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                </fieldset>
+               </div>
+                    
+                </div>
+                 <div class="panel-body">
+                    <div class="panel-body-top">
+                        <div class="panel-body-lf">
+                            Experience : {{emp.exp}}
+                        </div>
+                        <div class="panel-body-rt">
+                            Date of Joining : {{emp.doj}}
+                        </div>
+                    </div>    
+                   
+                        <div class="panel-body-center">
+                            Current Team: {{emp.currentteam}}
+                        </div>
+                        <div class="panel-body-center">
+                            Reporting Manager: {{emp.reportingmanager}}
+                        </div>
+                        <div class="panel-body-top">
+                          <div class="panel-body-lf">
+                            <i class="fa fa-phone" aria-hidden="true"></i> : {{emp.ph}}
+                         </div>
+                        <div class="panel-body-rt">
+                            <i class="fa fa-envelope" aria-hidden="true"></i> : {{emp.mail}} 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

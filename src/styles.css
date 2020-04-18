@@ -1,1 +1,195 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.page{ width:100%; margin: auto;}
+
+header{width: 100%;
+height: 50px;
+border-bottom: 1px solid #d1d1d1;
+background: #ffffff;
+}
+.logo {
+    width: 250px;
+border-right: 1px solid #d1d1d1;
+border-bottom: 1px solid #fff;
+background: #fff
+}
+section {
+    width: 100%;
+}
+.main {
+    width: 100%;
+    margin: auto;
+}
+.left_Body {
+    width: 250px;
+    float: left;
+}
+.content_body {
+    background: #f1f1f1f1;
+    display: flex;
+    padding: 5px 10px;
+}
+.menuTxt {
+    padding: 0px 8px;
+    text-transform: capitalize;
+    color: #336f27;
+    font-family: verdana;
+    font-size: 13px;
+}
+.iconColor {
+    color: #336f27;
+}
+ul{float:left}
+li {
+    float: left;
+    list-style-type: none;
+    width: 220px;
+    padding: 10px 15px;
+}
+.panel {
+    width: 285px; margin:5px;
+    float: left;
+    background: #fff;
+    padding: 10px;
+}
+.panel-heading {
+    float: left;
+    width: 300px;
+    height: 55px;
+}
+.panel-hd-img {
+    width: 50px;
+    float: left;
+}
+.iconImg {
+    font-size: 41px;
+}
+.panel-hd-title {
+    float: left;
+    width: 174px;
+}
+h5 {
+    font-size: 13px;
+    font-family: verdana;
+    color: #666;
+    padding: 3px 0;
+    text-transform: capitalize;
+}
+h6 {
+    font-size: 11px;
+    font-family: verdana;
+    font-weight: normal;
+}
+.panel-hd-icon {
+    float: right;
+    width: 70px;
+}
+.panel-heading-star {
+    width: 300px;
+    height: 25px;
+    border-bottom: 1px solid #d1d1d1;
+    float: left;
+}
+.panel-body {
+    float: left;
+    width: 300px;
+    padding: 5px;
+    font-family: verdana;
+    font-size: 11px;
+}
+.panel-body-lf {
+    float: left;
+    width: 130px;
+    border-right: 1px solid #d1d1d1;
+    height: 25px;
+}
+.panel-body-rt {
+    padding: 0 5px;
+    float: left;
+}
+.panel-body-top {
+    height: 25px;
+    width: 300px;
+    float: left;
+    padding: 5px 0;
+    border-bottom: 1px solid #d1d1d1d1;
+}
+.panel-body-center {
+    width: 285px;
+    float: left;
+    font-family: verdana;
+    font-size: 11px;
+    padding: 5px;
+    border-bottom: 1px solid #d1d1d1;
+    height: 25px;
+}
+.ratingLft {
+    float: left;
+    width: 135px;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+}
+.ratingRt {
+    float: left;
+    margin: -8px 0;
+}
+.searchBox{width: 300px;
+    border: 1px solid #d1d1d1;
+    height: 25px;
+    padding: 5px;
+    margin: 5px;}
+    .searchDiv li {
+        float: left;
+        border-bottom: 1px solid #b7b7b7;
+        font-size: 12px;
+        font-family: verdana;
+        color: #666;
+    }
+    .searchDiv {
+        background: #f1f1f1;
+        float: left;
+        margin: 6px 0 0 -10px;
+    }
+    .starIcon{width: 25px;
+height: 25px;
+background: #fff;
+border: 1px solid #d1d1d1;
+border-radius: 50%;
+line-height: 26px;
+text-indent: 4px;
+font-size: 13px;
+box-shadow: 1px 3px 0px #d1d1d1;
+    }
+
+    .iconDiv {
+        width: 115px;
+        background: #f2f2f2;
+        float: left;
+        position: absolute;
+        margin: 6px 0 0 -42px;
+        z-index: 999;
+        border: 1px solid #d1d1d1;
+    }
+    .iconDiv li {
+        float: left;
+        width: 25px;
+    }
+    .searchTxt {
+        display: inline-block;
+    }
+    .bell {
+        display: inline-block;
+        text-align: right;
+        width: 915px;
+    }
+    label {
+        font-family: verdana;
+        font-size: 13px;
+    }
